@@ -1,8 +1,9 @@
+// Valores de la Carta
 let arrayNumeros = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" ]
 let arrayPintas = ["♦", "♥", "♠", "♣"]
 // Div donde van las cartas Generadas
 let divCartasTop = document.querySelector('.cartasRandomDiv')
-// Definiendo Variables
+// Definiendo Variables de la Carta
 let carta = document.querySelector('.carta')
 let pintaTop = document.querySelector('.pintaTop')
 let pintaBot = document.querySelector('.pintaBot')
@@ -39,15 +40,21 @@ function crearCarta() {
         numeroCenter.style.color = 'black'
     }
     // Agregando Child
-    divCartasTop.appendChild(cartaAleatoria)
+    
     cartaAleatoria.appendChild(pintaTopRandom)
     cartaAleatoria.appendChild(numeroCenter)
     cartaAleatoria.appendChild(pintaBotRandom)
+    divCartasTop.appendChild(cartaAleatoria)
 
 }
+// Obteniendo Valor del Input
+inputCarta = document.querySelector('.inputCarta').value
+inputDraw = document.querySelector('.draw')
+inputDraw.addEventListener('click', tenCards)
 
-function tenCards(numeroInput) {
-    for(let i = 0; i <= 10 ; i++)
-    crearCarta()
+function tenCards() {
+    divCartasTop.innerHTML = ""
+    for(let i = 0; i <= 5 ; i++){
+    crearCarta()}
 }
 
