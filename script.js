@@ -94,14 +94,17 @@ const ordenar = (arr) => {
     // Creando Divs para las Cartas Div Row y Div Col
         let divParaCartasRow = document.createElement('div')
         let divParaCartasCol = document.createElement('div')
+        let numeroDeRow = document.createElement('h2')
 
     // Agregando Clases a los Div
         divParaCartasRow.classList.add('row')
-        divParaCartasCol.classList.add('col-md-12', 'd-flex', 'mt-5', 'mb-3')
-
+        divParaCartasCol.classList.add('col-md-12', 'd-flex', 'mt-1', 'mb-3', 'columna')
+        numeroDeRow.innerHTML = min
     // Agregando Childs del div sortedCardBoard
         sortedBoard.appendChild(divParaCartasRow)
         divParaCartasRow.appendChild(divParaCartasCol)
+        divParaCartasCol.appendChild(numeroDeRow)
+        
 
 
         // Agregando Cartas al div cartasOrdenadas, al final del ciclo while

@@ -1,11 +1,11 @@
 body {
-    background-color: hsl(120, 71%, 54%);
+    background-color: #32ac6b;
 }
 
 .carta {
     background-color: white;
-    height:130px;
-    width: 100px;
+    height:100px;
+    width: 70px;
     border-radius: 5px;
     position: relative;
     border: 1px solid black;
@@ -42,4 +42,8 @@ position: absolute;
     bottom: 0;
     margin-bottom: 0;
     
+}
+
+.columna:hover {
+    background-color:hsl(148, 75%, 58%)
 }
